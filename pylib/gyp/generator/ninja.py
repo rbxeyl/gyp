@@ -1711,7 +1711,7 @@ def ComputeOutputDir(params):
   generator_dir = os.path.relpath(params['options'].generator_output or '.')
 
   # output_dir: relative path from generator_dir to the build directory.
-  output_dir = params.get('generator_flags', {}).get('output_dir', 'out')
+  output_dir = params.get('generator_flags', {}).get('output_dir', '.')
 
   # Relative path from source root to our output files.  e.g. "out"
   return os.path.normpath(os.path.join(generator_dir, output_dir))
